@@ -65,3 +65,50 @@ main {
     padding: 0.5em 1em;
     color: #fff;
 }
+header ul {
+    display: flex ;
+    flex-direction: row;
+
+}
+header {
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    
+}
+header a {
+    border-top: none;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));
+    gap: 1em;
+    
+}
+
+main {
+    display: flex;
+   
+}
+.sidebar{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+    .sidebar {
+        margin-left: 0rem;
+        margin-top: 1em;
+    }
+    header {
+        display: block;
+    }
+    header ul {
+        display: block;
+    }
+    header a {
+        border-top: 1px solid #999;
+    }
+}
