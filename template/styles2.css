@@ -10,11 +10,16 @@ header {
     background-size: cover;
     background-color: rgba(255,255,255,0.8);
     background-blend-mode: lighten;
+    font-size: 1vw;
 }
-
+main {
+    display : flex;
+    flex-direction: row;
+}
 nav {
+    display: flex;
+    flex-direction: column;
     width: 20%;
-    float: left;
 }
 
 .menuitem {
@@ -25,15 +30,16 @@ nav {
 }
 
 .center {
-    float: left;
+   display: flex;
+   flex-direction: column;
     width: 50%;
     padding: 0 20px;
 }
 
 .right {
-    float: left;
     background-color: lightblue;
     width: 20%;
+    max-height: fit-content;
     padding: 10px 15px;
     margin-top: 7px;
 }
@@ -41,6 +47,7 @@ nav {
 img {
     width: 100%;
 }
+
 
 @media only screen and (max-width:800px) {
     /* For tablets: */
@@ -51,10 +58,20 @@ img {
     .right {
         width: 100%;
     }
+    .nav {
+        width: 20%;
+    }
+    main {
+        flex-wrap: wrap;
+    }
+ 
+   
+   
 }
 @media only screen and (max-width:500px) {
     /* For mobile phones: */
     .menu, .center, .right {
         width: 100%;
     }
+  
 }
